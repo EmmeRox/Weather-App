@@ -50,12 +50,19 @@ function showTemp(response) {
   let humidity = document.querySelector("#humid");
   let windSpeed = document.querySelector("#wind");
   let description = document.querySelector("#condition");
+  let icon = document.querySelector("#main-image");
+  let iconCode = response.data.weather[0].icon;
 
-  description.innerHTML = response.data.weather[0].main;
+  description.innerHTML = response.data.weather[0].description;
   city.innerHTML = `${cityInput}`;
   displayTemp.innerHTML = `${temperature}`;
   humidity.innerHTML = `${humid}%`;
   windSpeed.innerHTML = `${windy} km/h`;
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${iconCode}@2x.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
