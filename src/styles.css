@@ -18,6 +18,7 @@ h2 {
 h3 {
   font-size: 30px;
   padding-left: 15px;
+  margin: 0;
 }
 
 form {
@@ -64,7 +65,7 @@ form {
 
 .card {
   width: 100px;
-  background-color: #ffd3b6;
+  background-color: #ffe5d3;
   box-shadow: 0 10px 3px 2px #698474;
   height: 150px;
   text-align: center;
@@ -98,17 +99,18 @@ form {
 }
 
 .mainCity {
-  background-color: #ffd3b6;
+  background-color: #ffe5d3;
   width: 350px;
   border-radius: 10px;
   box-shadow: 0 10px 3px 2px #698474;
   margin-right: 40px;
   margin-left: 10px;
   border: 3px solid #ff9ab0;
+  padding-top: 0;
 }
 
 .details {
-  background-color: #ffd3b6;
+  background-color: #ffe5d3;
   border-radius: 40px;
   margin: 0 10px;
   box-shadow: 0 10px 3px 2px #698474;
@@ -116,6 +118,10 @@ form {
   padding-top: 40px;
   font-size: 25px;
   border: 3px solid #ff9ab0;
+}
+
+.updated {
+  font-size: 12px;
 }
 
 .condition {
@@ -130,7 +136,7 @@ form {
 
 .weather {
   font-size: 65px;
-  padding-left: 45px;
+  padding-left: 40px;
 }
 
 .btncolor1 {
