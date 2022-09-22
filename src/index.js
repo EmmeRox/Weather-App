@@ -104,10 +104,11 @@ function showCelTemp(event) {
   temperature.innerHTML = celciusTemperature;
 }
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-document.addEventListener("DOMContentLoaded", function () {
-  fahrenheitLink.addEventListener("click", showFahTemp);
-});
+let fahrenheitLink = document.querySelector("#farenheit-link");
+fahrenheitLink.addEventListener("click", showFahTemp);
+
+let celsiusLink = document.querySelector("#celcius-link");
+celsiusLink.addEventListener("click", showCelTemp);
 
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", currentLocation);
