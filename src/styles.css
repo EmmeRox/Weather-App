@@ -102,20 +102,18 @@ form {
   width: 350px;
   border-radius: 10px;
   box-shadow: 0 10px 3px 2px #698474;
-  margin-right: 40px;
-  margin-left: 10px;
+  margin: 0 40 10 10;
   border: 3px solid #ff9ab0;
   padding-top: 0;
-  margin-bottom: 10px;
 }
 
 .details {
   background-color: #ffe5d3;
-  border-radius: 40px;
+  border-radius: 10px;
   margin: 0 10px;
   box-shadow: 0 10px 3px 2px #698474;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
   font-size: 25px;
   border: 3px solid #ff9ab0;
 }
@@ -130,16 +128,27 @@ form {
 
 #celcius-link {
   text-decoration: none;
+  color: #af5c6e;
 }
 
 #farenheit-link {
   text-decoration: none;
+  color: #af5c6e;
+}
+
+#celcius-link:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+#farenheit-link:hover {
+  color: blue;
+  text-decoration: underline;
 }
 
 .condition {
   font-size: 30px;
   margin-top: 2px;
-  font-weight: bold;
   text-transform: capitalize;
 }
 
