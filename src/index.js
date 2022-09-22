@@ -1,3 +1,5 @@
+let celciusTemperature = null;
+
 function formatDate() {
   let date = new Date();
 
@@ -40,7 +42,6 @@ function search(event) {
 }
 
 function showTemp(response) {
-  let temperature = Math.round(response.data.main.temp);
   let cityInput = response.data.name;
   let humid = response.data.main.humidity;
   let windy = Math.round(response.data.wind.speed);
@@ -53,9 +54,11 @@ function showTemp(response) {
   let icon = document.querySelector("#main-image");
   let iconCode = response.data.weather[0].icon;
 
+  celciusTemperature = Math.round(response.data.main.temp);
+
   description.innerHTML = response.data.weather[0].description;
   city.innerHTML = `${cityInput}`;
-  displayTemp.innerHTML = `${temperature}`;
+  displayTemp.innerHTML = `${celciusTemperature}`;
   humidity.innerHTML = `${humid}%`;
   windSpeed.innerHTML = `${windy} km/h`;
   icon.setAttribute(
@@ -73,9 +76,6 @@ function searchCity(city) {
   axios.get(apiUrl).then(showTemp);
 }
 
-let form = document.querySelector("#form-input");
-form.addEventListener("submit", search);
-
 function searchCurrent(city) {
   let apiKey = "1fe785ac5639f522853d21f921fefa5e";
   let units = "metric";
@@ -91,5 +91,26 @@ function currentLocation(event) {
   formatDate();
 }
 
+function showFahTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#weather");
+  let fahrenheitTemp = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelTemp(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#weather");
+  temperature.innerHTML = celciusTemperature;
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+document.addEventListener("DOMContentLoaded", function () {
+  fahrenheitLink.addEventListener("click", showFahTemp);
+});
+
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", currentLocation);
+
+let form = document.querySelector("#form-input");
+form.addEventListener("submit", search);
