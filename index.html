@@ -12,9 +12,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter&family=Caveat:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
@@ -35,8 +38,20 @@
               />
             </div>
             <span class="btn">
-              <button type="submit" id="search" class="btn btn-primary btncolor1">Search</button>
-              <button type="button" class="btn btn-info btncolor2" id="current-button">Current</button>
+              <button
+                type="submit"
+                id="search"
+                class="btn btn-primary btncolor1"
+              >
+                Search
+              </button>
+              <button
+                type="button"
+                class="btn btn-info btncolor2"
+                id="current-button"
+              >
+                Current
+              </button>
             </span>
           </form>
         </div>
@@ -45,97 +60,61 @@
       <div class="row searched">
         <div class="col-8 mainCity">
           <h2 id="city"></h2>
-          <h3><span class="updated">Last updated</span>
-            <br>
-            <span id="nowTime"></span></h3>
+          <h3>
+            <span class="updated">Last updated</span>
+            <br />
+            <span id="nowTime"></span>
+          </h3>
           <div class="row">
             <div class="col-6 currentIMG">
-              <img src="" class="mainImage" id="main-image">
+              <img src="" class="mainImage" id="main-image" />
             </div>
-            <div class="col-6"> 
+            <div class="col-6">
               <span class="weather" id="weather">12</span>
-              <span class="units"><a href="#" id="farenheit-link">°F</a>|
-              <a href="#" id="celcius-link">°C</a></span>
+              <span class="units"
+                ><a href="#" id="farenheit-link">°F</a>|
+                <a href="#" id="celcius-link">°C</a></span
+              >
             </div>
           </div>
         </div>
         <div class="col-4 details">
           <p>
             <span id="condition" class="condition"></span>
-            <br>
+            <br />
             <span class="underline">Wind</span>
-            <br>
+            <br />
             <span id="wind"> Km/h</span>
-            <br>
+            <br />
             <span class="underline">Humidity</span>
-            <br>
+            <br />
             <span id="humid"></span>
           </p>
         </div>
       </div>
       <br />
-      <div class="row gx-6 cards">
+      <div class="row gx-6 cards forecast">
         <div class="col-md-2">
-          <div class="card mx-auto style="width: 18rem;">
+          <div class="card mx-auto">
             <div class="card-body">
-              <h5 class="card-title">68°</h5>
-              <p class="card-text">
-                <img src="src/images/SunClipArt.jpg" class="small">
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="card mx-auto style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">73°</h5>
-              <p class="card-text">
-                <img src="src/images/PartialCloud.jpg" class="small">
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="card mx-auto style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">77°</h5>
-              <p class="card-text">
-                <img src="src/images/SunClipArt.jpg" class="small">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="card mx-auto style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">68°</h5>
-              <p class="card-text">
-                <img src="src/images/CloudyClipart.jpg" class="small">
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="card mx-auto style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">72°</h5>
-              <p class="card-text">
-                <img src="src/images/RainyClipArt2.jpg" class="small">
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="card mx-auto style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">65°</h5>
-              <p class="card-text">
-                <img src="src/images/RainyClipArt2.jpg" class="small">
+              <p class="card-space"><span class="forecast-date">Day</span></p>
+              <p class="card-title forecast-temps">
+                <span class="forecast-max">68°</span>
+                <span class="forecast-min">50°</span>
               </p>
             </div>
           </div>
         </div>
       </div>
-      <p class="footnote"><a class="link" href="https://github.com/EmmeRox/Weather-App" target="_blank" >Open-source code</a> by Emmeline Ocampo</p>
+      <p class="footnote">
+        <a
+          class="link"
+          href="https://github.com/EmmeRox/Weather-App"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Emmeline Ocampo
+      </p>
     </div>
     <script src="src/index.js"></script>
   </body>

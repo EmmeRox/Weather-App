@@ -77,13 +77,12 @@ form {
   box-shadow: 0 10px 6px 6px #f5b5e7;
 }
 
-.card-title:hover {
-  font-size: 35px;
+.card-space {
+  margin-bottom: 5px;
 }
 
-.card-title {
-  font-size: 30px;
-  transition: all 200ms ease-in-out;
+.forecast-temps {
+  font-size: 20px;
 }
 
 .btn {
