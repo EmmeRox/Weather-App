@@ -68,6 +68,28 @@ function showTemp(response) {
   icon.setAttribute("alt", response.data.weather[0].description);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+  <div class="col-md-2">
+    <div class="card mx-auto">
+      <div class="card-body">
+        <p class="card-space"><span class="forecast-date">Day</span></p>
+        <p class="card-title forecast-temps">
+          <span class="forecast-max">68°</span>
+          <span class="forecast-min">50°</span>
+        </p>
+      </div>
+    </div>
+  </div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement = forecastHTML;
+}
+
 function searchCity(city) {
   let apiKey = "1fe785ac5639f522853d21f921fefa5e";
   let cityInput = document.querySelector("#enter-city").value;
@@ -115,3 +137,4 @@ currentButton.addEventListener("click", currentLocation);
 
 let form = document.querySelector("#form-input");
 form.addEventListener("submit", search);
+displayForecast();
