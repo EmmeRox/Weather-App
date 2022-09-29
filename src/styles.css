@@ -64,6 +64,10 @@ form {
   color: #313b35;
 }
 
+.card-body {
+  padding-top: 10px;
+}
+
 .card {
   width: 100px;
   background-color: #ffe5d3;
@@ -79,11 +83,12 @@ form {
 }
 
 .card-space {
-  margin-bottom: 5px;
+  margin: 0;
 }
 
 .forecast-temps {
   font-size: 20px;
+  margin-bottom: 0;
 }
 
 .btn {
@@ -146,6 +151,15 @@ form {
 #farenheit-link:hover {
   color: blue;
   text-decoration: underline;
+}
+
+.forecast-max {
+  font-size: 25px;
+}
+
+.forecast-min {
+  font-size: 18px;
+  color: rgb(97, 97, 97);
 }
 
 .condition {

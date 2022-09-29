@@ -76,27 +76,37 @@ function showTemp(response) {
   getForecast(response.data.coord);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (forecastDay) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
   <div class="col-2">
     <div class="card mx-auto">
       <div class="card-body">
-        <p class="card-space"><span class="forecast-date">${
+        <p class="card-space"><span class="forecast-date">${formatDay(
           forecastDay.dt
-        }}</span></p>
+        )}</span></p>
         <p class="card-title forecast-temps">
           <span class="forecast-max">${Math.round(forecastDay.temp.max)}</span>
+          <br>
           <span class="forecast-min">${Math.round(forecastDay.temp.min)}</span>
         </p>
         <img src="http://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
-        }@2x.png" width="20"/>
+        }@2x.png" width="40"/>
       </div>
     </div>
   </div>`;
