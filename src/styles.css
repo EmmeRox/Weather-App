@@ -1,5 +1,5 @@
 body {
-  background-color: #e9c7c7;
+  background: linear-gradient(to top, #e9c7ce 0%, #fad0c4 100%);
   color: #4b5c52;
 }
 
@@ -179,6 +179,10 @@ form {
   font-size: 30px;
   margin-top: 2px;
   text-transform: capitalize;
+}
+
+.spacing {
+  padding-top: 10px;
 }
 
 .underline {
