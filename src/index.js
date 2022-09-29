@@ -101,13 +101,12 @@ function displayForecast(response) {
           forecastDay.dt
         )}</span></p>
         <p class="card-title forecast-temps">
-          <span class="forecast-max">${Math.round(forecastDay.temp.max)}</span>
-          <br>
-          <span class="forecast-min">${Math.round(forecastDay.temp.min)}</span>
+          <span class="forecast-max">${Math.round(forecastDay.temp.max)}°</span>
+          <span class="forecast-min">${Math.round(forecastDay.temp.min)}°</span>
         </p>
         <img src="http://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
-        }@2x.png" width="40"/>
+        }@2x.png" width="55" class="icon-forecast"/>
       </div>
     </div>
   </div>`;

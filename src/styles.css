@@ -158,13 +158,21 @@ form {
   text-decoration: underline;
 }
 
+.detail-info {
+  font-size: 20px;
+}
+
+.icon-forecast {
+  padding-top: 5px;
+}
+
 .forecast-max {
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .forecast-min {
   font-size: 18px;
-  color: rgb(97, 97, 97);
+  color: rgb(124, 124, 124);
 }
 
 .condition {
@@ -175,6 +183,7 @@ form {
 
 .underline {
   text-decoration: underline;
+  font-size: 22px;
 }
 
 .weather {
