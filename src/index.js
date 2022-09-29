@@ -77,7 +77,6 @@ function showTemp(response) {
 }
 
 function displayForecast(response) {
-  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -85,12 +84,12 @@ function displayForecast(response) {
     forecastHTML =
       forecastHTML +
       `
-  <div class="col-md-2">
+  <div class="col-2">
     <div class="card mx-auto">
       <div class="card-body">
         <p class="card-space"><span class="forecast-date">${
           forecastDay.dt
-        }</span></p>
+        }}</span></p>
         <p class="card-title forecast-temps">
           <span class="forecast-max">${Math.round(forecastDay.temp.max)}</span>
           <span class="forecast-min">${Math.round(forecastDay.temp.min)}</span>
@@ -104,7 +103,7 @@ function displayForecast(response) {
   });
 
   forecastHTML = forecastHTML + `</div>`;
-  forecastElement = forecastHTML;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function searchCity(city) {
